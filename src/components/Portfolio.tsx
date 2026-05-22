@@ -296,44 +296,7 @@ export default function Portfolio() {
 
       {/* Contact */}
       <Section id="contact" eyebrow="Contact" title="Let's build something together">
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="space-y-4">
-            <ContactRow icon={Mail} label="Email" value="dajashni@example.com" />
-            <ContactRow icon={Phone} label="Phone" value="+91 00000 00000" />
-            <ContactRow icon={MapPin} label="Location" value="Chennai, India" />
-            <div className="flex gap-3 pt-4">
-              {[Linkedin, Github, Instagram].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="h-11 w-11 rounded-full glass flex items-center justify-center hover:bg-primary/20 hover:text-primary transition"
-                  aria-label="social"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <form
-            onSubmit={(e) => { e.preventDefault(); }}
-            className="glass rounded-3xl p-6 space-y-4"
-          >
-            <Input placeholder="Your name" />
-            <Input type="email" placeholder="Your email" />
-            <textarea
-              rows={5}
-              placeholder="Your message"
-              className="w-full rounded-xl bg-white/5 border border-border px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/60 transition resize-none"
-            />
-            <button
-              type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground px-6 py-3 font-semibold hover:opacity-90 transition glow"
-            >
-              Send Message <Send className="h-4 w-4" />
-            </button>
-          </form>
-        </div>
+        <ContactSection />
       </Section>
 
       {/* Footer */}
