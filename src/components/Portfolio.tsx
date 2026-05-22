@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Github, Linkedin, Instagram, Mail, Phone, Download, ArrowRight,
   GraduationCap, Code2, Brain, Lightbulb, Sparkles, Rocket,
-  MessageSquare, Cpu, Send, MapPin,
+  MessageSquare, Cpu, Send, MapPin, CheckCircle, AlertCircle,
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
 
