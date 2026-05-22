@@ -1,26 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Portfolio from "@/components/Portfolio";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Dajashni R — Aspiring IT Professional & B.Tech Student" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Dajashni R, a 2nd-year B.Tech Information Technology student at R.M.D Engineering College, Chennai, passionate about coding, NLP, and building modern digital solutions.",
+      },
+      { property: "og:title", content: "Dajashni R — Portfolio" },
+      { property: "og:description", content: "Aspiring IT professional. B.Tech IT student at R.M.D Engineering College, Chennai." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
+  component: Portfolio,
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
